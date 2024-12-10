@@ -36,14 +36,12 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             textBox7 = new TextBox();
-            textBox8 = new TextBox();
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
@@ -52,8 +50,9 @@
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
-            label17 = new Label();
             button1 = new Button();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -61,9 +60,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 22);
             label1.Name = "label1";
-            label1.Size = new Size(89, 15);
+            label1.Size = new Size(70, 15);
             label1.TabIndex = 0;
-            label1.Text = "id_поставщика";
+            label1.Text = "Поставщик";
             // 
             // label2
             // 
@@ -128,14 +127,6 @@
             label8.TabIndex = 7;
             label8.Text = "Продажа по рецепту";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(191, 14);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 8;
-            textBox1.KeyPress += textBox1_KeyPress;
-            // 
             // textBox2
             // 
             textBox2.Location = new Point(191, 47);
@@ -180,13 +171,6 @@
             textBox7.Size = new Size(100, 23);
             textBox7.TabIndex = 14;
             textBox7.KeyPress += textBox7_KeyPress;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(191, 253);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 23);
-            textBox8.TabIndex = 15;
             // 
             // label9
             // 
@@ -260,32 +244,44 @@
             label16.TabIndex = 23;
             label16.Text = "label16";
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(35, 325);
-            label17.Name = "label17";
-            label17.Size = new Size(44, 15);
-            label17.TabIndex = 24;
-            label17.Text = "label17";
-            // 
             // button1
             // 
-            button1.Location = new Point(354, 305);
+            button1.Location = new Point(358, 289);
             button1.Name = "button1";
             button1.Size = new Size(105, 55);
             button1.TabIndex = 25;
-            button1.Text = "Добавить";
+            button1.Text = "ОК";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "да", "нет" });
+            comboBox1.Location = new Point(191, 261);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(100, 23);
+            comboBox1.TabIndex = 26;
+            // 
+            // comboBox2
+            // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(191, 14);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(100, 23);
+            comboBox2.TabIndex = 27;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // FormMedicineADD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(491, 383);
+            ClientSize = new Size(491, 358);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(button1);
-            Controls.Add(label17);
             Controls.Add(label16);
             Controls.Add(label15);
             Controls.Add(label14);
@@ -294,14 +290,12 @@
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
-            Controls.Add(textBox8);
             Controls.Add(textBox7);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -310,8 +304,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormMedicineADD";
-            Text = "FormMedicineADD";
+            Text = "Препарат";
             Load += FormMedicineADD_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -327,14 +322,12 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox7;
-        private TextBox textBox8;
         private Label label9;
         private Label label10;
         private Label label11;
@@ -343,7 +336,8 @@
         private Label label14;
         private Label label15;
         private Label label16;
-        private Label label17;
         private Button button1;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
     }
 }
