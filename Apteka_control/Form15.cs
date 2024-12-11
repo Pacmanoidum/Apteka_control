@@ -390,41 +390,6 @@ namespace Apteka_control
             string Sum = selectedRow.Cells[5].Value.ToString();
             string customer_id = null;
             string employee_id = null;
-            try
-            {
-                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-                {
-                    connection.Open();
-                    string script = $"SELECT customer_id FROM Customers WHERE CONCAT_WS(' ', first_name, second_name, middle_name) = \"{customer_name}\"";
-                    using (SQLiteCommand command = new SQLiteCommand(script, connection))
-                    {
-                        // Выполняем запрос
-                        object result = command.ExecuteScalar();
-                        customer_id = result.ToString();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибка: " + ex.Message);
-            }
-            try
-            {
-                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-                {
-                    connection.Open();
-                    string script = $"SELECT employee_id FROM Employees WHERE CONCAT_WS(' ', first_name, second_name, middle_name) = \"{employee_name}\"";
-                    using (SQLiteCommand command = new SQLiteCommand(script, connection))
-                    {
-                        object result = command.ExecuteScalar();
-                        employee_id = result.ToString();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибка: " + ex.Message);
-            }
 
             UltimateCheckForm newform = new UltimateCheckForm(employee_id, check_id, customer_id, data, vrema, customer_name, employee_name, Sum);
             newform.ShowDialog();
