@@ -20,6 +20,7 @@ namespace Apteka_control
         private string connectionString = "Data Source=AptekaDB.db;Version=3;";
         private string employee_id;
         private string login;
+        private string column_id;
 
 
         public Form15(string _employee_id, string _login)
@@ -56,7 +57,7 @@ namespace Apteka_control
                     {
                         dataGridView1.DataSource = null;
                         con.Open();
-                        SQLiteDataAdapter adapter = new SQLiteDataAdapter("select customer_id, first_name as имя, second_name as фамилия, middle_name as отчество, phone_number as номер_телефона, " +
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter("select first_name as имя, second_name as фамилия, middle_name as отчество, phone_number as номер_телефона, " +
                             "passport_series as серия_паспорта, passport_number as номер_паспорта, town as город, street as улица, house as дом, apartment as квартира from Customers", con);
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
@@ -69,7 +70,7 @@ namespace Apteka_control
                     {
                         dataGridView1.DataSource = null;
                         con.Open();
-                        string script = "select customer_id, first_name as имя, second_name as фамилия, middle_name as отчество, phone_number as номер_телефона, " +
+                        string script = "select first_name as имя, second_name as фамилия, middle_name as отчество, phone_number as номер_телефона, " +
                             "passport_series as серия_паспорта, passport_number as номер_паспорта, town as город, street as улица, house as дом, apartment as квартира from Customers where ";
                         for (int i = 0; i < columnNames.Count; i++)
                         {
@@ -103,7 +104,7 @@ namespace Apteka_control
                     {
                         dataGridView1.DataSource = null;
                         con.Open();
-                        SQLiteDataAdapter adapter = new SQLiteDataAdapter("select employee_id, first_name as имя, second_name as фамилия, middle_name as отчество, position as должность, " +
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter("select first_name as имя, second_name as фамилия, middle_name as отчество, position as должность, " +
                             "passport_series as серия_паспорта, passport_number as номер_паспорта, birth_date as день_рождения, hire_date as дата_найма, phone_number as номер_телефона, " +
                             "work_schedule as график_работы, salary as зарплата, town as город, street as улица, house as дом, apartment as квартира from Employees", con);
                         DataTable dt = new DataTable();
@@ -117,7 +118,7 @@ namespace Apteka_control
                     {
                         dataGridView1.DataSource = null;
                         con.Open();
-                        string script = "select employee_id, first_name as имя, second_name as фамилия, middle_name as отчество, position as должность, " +
+                        string script = "select first_name as имя, second_name as фамилия, middle_name as отчество, position as должность, " +
                             "passport_series as серия_паспорта, passport_number as номер_паспорта, birth_date as день_рождения, hire_date as дата_найма, phone_number as номер_телефона, " +
                             "work_schedule as график_работы, salary as зарплата, town as город, street as улица, house as дом, apartment as квартира from Employees where ";
                         for (int i = 0; i < columnNames.Count; i++)
@@ -152,7 +153,7 @@ namespace Apteka_control
                     {
                         dataGridView1.DataSource = null;
                         con.Open();
-                        SQLiteDataAdapter adapter = new SQLiteDataAdapter("select m.medicine_id, p.provider_title as название_производителя, m.medicine_title as название_товара, m.type as тип, m.measure as еденица_измерения, " +
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter("select p.provider_title as название_производителя, m.medicine_title as название_товара, m.type as тип, m.measure as еденица_измерения, " +
                             "m.amount_in_one  количество_в_одном, m.available_amount as доступное_количество, m.price as цена, m.presciption_sales as требуемость_рецепта from Medicines as m left join Providers as p on m.provider_id = p.provider_id", con);
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
@@ -167,7 +168,7 @@ namespace Apteka_control
                     {
                         dataGridView1.DataSource = null;
                         con.Open();
-                        string script = "select m.medicine_id, p.provider_title as название_производителя, m.medicine_title as название_товара, m.type as тип, m.measure as еденица_измерения, " +
+                        string script = "select p.provider_title as название_производителя, m.medicine_title as название_товара, m.type as тип, m.measure as еденица_измерения, " +
                             "m.amount_in_one  количество_в_одном, m.available_amount as доступное_количество, m.price as цена, m.presciption_sales as требуемость_рецепта from Medicines as m left join Providers as p on m.provider_id = p.provider_id where ";
                         for (int i = 0; i < columnNames.Count; i++)
                         {
@@ -202,7 +203,7 @@ namespace Apteka_control
                     {
                         dataGridView1.DataSource = null;
                         con.Open();
-                        SQLiteDataAdapter adapter = new SQLiteDataAdapter("select provider_id, provider_title as название_производителя, phone_number as номер_телефона, first_name as имя, second_name as фамилия, middle_name as отчество, " +
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter("select provider_title as название_производителя, phone_number as номер_телефона, first_name as имя, second_name as фамилия, middle_name as отчество, " +
                             "town as город, street as улица, house as дом, apartment as квартира from Providers", con);
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
@@ -215,7 +216,7 @@ namespace Apteka_control
                     {
                         dataGridView1.DataSource = null;
                         con.Open();
-                        string script = "select provider_id, provider_title as название_производителя, phone_number as номер_телефона, first_name as имя, second_name as фамилия, middle_name as отчество, " +
+                        string script = "select provider_title as название_производителя, phone_number as номер_телефона, first_name as имя, second_name as фамилия, middle_name as отчество, " +
                             "town as город, street as улица, house as дом, apartment as квартира from Providers where ";
                         for (int i = 0; i < columnNames.Count; i++)
                         {
@@ -296,30 +297,35 @@ namespace Apteka_control
         {
             SeeCustomers();
             explore_check_button.Visible = false;
+            column_id = "customer_id";
         }
 
         private void Empolyee_Button_Click(object sender, EventArgs e)
         {
             SeeEmployees();
             explore_check_button.Visible = false;
+            column_id = "employee_id";
         }
 
         private void Medicines_button_Click(object sender, EventArgs e)
         {
             SeeMedicines();
             explore_check_button.Visible = false;
+            column_id = "medicine_id";
         }
 
         private void Providers_button_Click(object sender, EventArgs e)
         {
             SeeProviders();
             explore_check_button.Visible = false;
+            column_id = "provider_id";
         }
 
         private void Checks_button_Click(object sender, EventArgs e)
         {
             SeeChecks();
             explore_check_button.Visible = true;
+            column_id = "check_id";
         }
 
         private void button_search_Click(object sender, EventArgs e)
@@ -327,7 +333,7 @@ namespace Apteka_control
             if (dataGridView1.DataSource == null) return;
 
             string keyword = textBox1.Text;
-            string column_name = dataGridView1.Columns[0].HeaderText;
+            //string column_name = dataGridView1.Columns[0].HeaderText;
             //Используем словарь для получения названия таблицы
             Dictionary<string, string> dict = new Dictionary<string, string>
                 {
@@ -337,7 +343,7 @@ namespace Apteka_control
                     {"medicine_id", "Medicines" },
                     {"provider_id", "Providers" }
                 };
-            dict.TryGetValue(column_name, out string table_name);
+            dict.TryGetValue(column_id, out string table_name);
 
             //Получаем имена всех столбцов
             List<string> columnNames = [];
@@ -384,41 +390,6 @@ namespace Apteka_control
             string Sum = selectedRow.Cells[5].Value.ToString();
             string customer_id = null;
             string employee_id = null;
-            try
-            {
-                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-                {
-                    connection.Open();
-                    string script = $"SELECT customer_id FROM Customers WHERE CONCAT_WS(' ', first_name, second_name, middle_name) = \"{customer_name}\"";
-                    using (SQLiteCommand command = new SQLiteCommand(script, connection))
-                    {
-                        // Выполняем запрос
-                        object result = command.ExecuteScalar();
-                        customer_id = result.ToString();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибка: " + ex.Message);
-            }
-            try
-            {
-                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-                {
-                    connection.Open();
-                    string script = $"SELECT employee_id FROM Employees WHERE CONCAT_WS(' ', first_name, second_name, middle_name) = \"{employee_name}\"";
-                    using (SQLiteCommand command = new SQLiteCommand(script, connection))
-                    {
-                        object result = command.ExecuteScalar();
-                        employee_id = result.ToString();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибка: " + ex.Message);
-            }
 
             UltimateCheckForm newform = new UltimateCheckForm(employee_id, check_id, customer_id, data, vrema, customer_name, employee_name, Sum);
             newform.ShowDialog();
