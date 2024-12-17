@@ -133,6 +133,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 9;
+            textBox2.KeyPress += textBox2_KeyPress;
             // 
             // textBox3
             // 
@@ -140,6 +141,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 10;
+            textBox3.KeyPress += textBox3_KeyPress;
             // 
             // textBox4
             // 
@@ -147,6 +149,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 11;
+            textBox4.KeyPress += textBox4_KeyPress;
             // 
             // textBox5
             // 

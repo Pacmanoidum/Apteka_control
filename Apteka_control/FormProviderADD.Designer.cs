@@ -118,6 +118,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 6;
+            textBox1.KeyPress += textBox1_KeyPress;
             // 
             // textBox2
             // 
@@ -133,6 +134,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 8;
+            textBox3.KeyPress += textBox3_KeyPress;
             // 
             // textBox4
             // 
@@ -140,6 +142,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 9;
+            textBox4.KeyPress += textBox4_KeyPress;
             // 
             // textBox5
             // 
@@ -147,6 +150,7 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(100, 23);
             textBox5.TabIndex = 10;
+            textBox5.KeyPress += textBox5_KeyPress;
             // 
             // textBox6
             // 
@@ -154,6 +158,7 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(100, 23);
             textBox6.TabIndex = 11;
+            textBox6.KeyPress += textBox6_KeyPress;
             // 
             // label7
             // 
@@ -234,6 +239,7 @@
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(100, 23);
             textBox7.TabIndex = 20;
+            textBox7.KeyPress += textBox7_KeyPress;
             // 
             // textBox8
             // 
@@ -241,6 +247,7 @@
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(100, 23);
             textBox8.TabIndex = 21;
+            textBox8.KeyPress += textBox8_KeyPress;
             // 
             // textBox9
             // 

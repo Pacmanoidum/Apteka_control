@@ -130,6 +130,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 9;
+            textBox1.KeyPress += textBox1_KeyPress;
             // 
             // textBox2
             // 
@@ -137,6 +138,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 10;
+            textBox2.KeyPress += textBox2_KeyPress;
             // 
             // textBox3
             // 
@@ -144,6 +146,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 11;
+            textBox3.KeyPress += textBox3_KeyPress;
             // 
             // textBox4
             // 
@@ -175,6 +178,7 @@
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(100, 23);
             textBox7.TabIndex = 15;
+            textBox7.KeyPress += textBox7_KeyPress;
             // 
             // button1
             // 
@@ -282,6 +286,7 @@
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(100, 23);
             textBox8.TabIndex = 28;
+            textBox8.KeyPress += textBox8_KeyPress;
             // 
             // textBox9
             // 
@@ -289,6 +294,7 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(100, 23);
             textBox9.TabIndex = 29;
+            textBox9.KeyPress += textBox9_KeyPress;
             // 
             // textBox10
             // 

@@ -143,6 +143,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 8;
+            textBox2.KeyPress += textBox2_KeyPress;
             // 
             // textBox3
             // 
@@ -150,6 +151,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 9;
+            textBox3.KeyPress += textBox3_KeyPress;
             // 
             // textBox4
             // 
@@ -157,6 +159,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 10;
+            textBox4.KeyPress += textBox4_KeyPress;
             // 
             // textBox5
             // 
@@ -240,6 +243,7 @@
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(100, 23);
             textBox10.TabIndex = 20;
+            textBox10.KeyPress += textBox10_KeyPress;
             // 
             // textBox11
             // 
@@ -382,6 +386,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 36;
+            textBox1.KeyPress += textBox1_KeyPress;
             // 
             // textBox12
             // 
@@ -389,6 +394,7 @@
             textBox12.Name = "textBox12";
             textBox12.Size = new Size(100, 23);
             textBox12.TabIndex = 37;
+            textBox12.KeyPress += textBox12_KeyPress;
             // 
             // label24
             // 
@@ -414,6 +420,7 @@
             textBox13.Name = "textBox13";
             textBox13.Size = new Size(100, 23);
             textBox13.TabIndex = 40;
+            textBox13.KeyPress += textBox13_KeyPress;
             // 
             // textBox14
             // 
@@ -421,6 +428,7 @@
             textBox14.Name = "textBox14";
             textBox14.Size = new Size(100, 23);
             textBox14.TabIndex = 41;
+            textBox14.KeyPress += textBox14_KeyPress;
             // 
             // textBox15
             // 
@@ -490,6 +498,7 @@
             textBox16.Name = "textBox16";
             textBox16.Size = new Size(100, 23);
             textBox16.TabIndex = 49;
+            textBox16.KeyPress += textBox16_KeyPress;
             // 
             // label32
             // 
@@ -515,6 +524,7 @@
             textBox17.Name = "textBox17";
             textBox17.Size = new Size(100, 23);
             textBox17.TabIndex = 52;
+            textBox17.KeyPress += textBox17_KeyPress;
             // 
             // label34
             // 
