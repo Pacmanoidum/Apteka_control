@@ -132,7 +132,7 @@ namespace Apteka_control
                     }
                     hash_password = sb.ToString();
                 }
-                    try
+                try
                 {
                     using (SQLiteConnection con = new SQLiteConnection(connectionString))
                     {
@@ -268,6 +268,66 @@ namespace Apteka_control
         {
             // Запрет писать что угодно кроме цифр
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox17_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
         }
     }
 }

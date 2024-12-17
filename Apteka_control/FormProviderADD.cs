@@ -27,7 +27,7 @@ namespace Apteka_control
         private string house;
         private string apartment;
 
-        public FormProviderADD(string _id = null, string _title = null, string _phone = null, string _name = null, string _surname = null, 
+        public FormProviderADD(string _id = null, string _title = null, string _phone = null, string _name = null, string _surname = null,
             string _third_name = null, string _town = null, string _street = null, string _house = null, string _apartment = null)
         {
             InitializeComponent();
@@ -147,6 +147,48 @@ namespace Apteka_control
         {
             // Запрет писать что угодно кроме цифр
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
         }
     }
 }

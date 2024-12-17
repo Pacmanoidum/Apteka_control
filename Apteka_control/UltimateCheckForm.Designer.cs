@@ -37,9 +37,6 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             dataGridView1 = new DataGridView();
-            MedicineTitle = new DataGridViewTextBoxColumn();
-            Amount = new DataGridViewTextBoxColumn();
-            sum = new DataGridViewTextBoxColumn();
             label5 = new Label();
             comboBox2 = new ComboBox();
             label6 = new Label();
@@ -50,6 +47,9 @@
             textBox5 = new TextBox();
             label7 = new Label();
             textBox6 = new TextBox();
+            MedicineTitle = new DataGridViewTextBoxColumn();
+            Amount = new DataGridViewTextBoxColumn();
+            sum = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -136,28 +136,6 @@
             dataGridView1.Size = new Size(508, 165);
             dataGridView1.TabIndex = 8;
             dataGridView1.DataError += dataGridView1_DataError;
-            // 
-            // MedicineTitle
-            // 
-            MedicineTitle.HeaderText = "medicine_title";
-            MedicineTitle.Name = "MedicineTitle";
-            MedicineTitle.ReadOnly = true;
-            MedicineTitle.Width = 140;
-            // 
-            // Amount
-            // 
-            Amount.FillWeight = 200F;
-            Amount.HeaderText = "amount";
-            Amount.Name = "Amount";
-            Amount.ReadOnly = true;
-            Amount.Width = 140;
-            // 
-            // sum
-            // 
-            sum.HeaderText = "sum";
-            sum.Name = "sum";
-            sum.ReadOnly = true;
-            sum.Width = 140;
             // 
             // label5
             // 
@@ -250,6 +228,28 @@
             textBox6.ReadOnly = true;
             textBox6.Size = new Size(100, 23);
             textBox6.TabIndex = 18;
+            // 
+            // MedicineTitle
+            // 
+            MedicineTitle.HeaderText = "название_товара";
+            MedicineTitle.Name = "MedicineTitle";
+            MedicineTitle.ReadOnly = true;
+            MedicineTitle.Width = 148;
+            // 
+            // Amount
+            // 
+            Amount.FillWeight = 200F;
+            Amount.HeaderText = "количество";
+            Amount.Name = "Amount";
+            Amount.ReadOnly = true;
+            Amount.Width = 148;
+            // 
+            // sum
+            // 
+            sum.HeaderText = "сумма";
+            sum.Name = "sum";
+            sum.ReadOnly = true;
+            sum.Width = 148;
             // 
             // UltimateCheckForm
             // 

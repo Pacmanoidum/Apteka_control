@@ -203,5 +203,23 @@ namespace Apteka_control
                 provider_id = Convert.ToString(selectedItem.Value); // Здесь сохраняем значение Id
             }
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
     }
 }

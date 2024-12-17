@@ -29,7 +29,7 @@ namespace Apteka_control
         private string street;
         private string house;
         private string apartment;
-        public FormCustomerADD(string _customer_id = null, string _first_name = null, string _second_name = null, 
+        public FormCustomerADD(string _customer_id = null, string _first_name = null, string _second_name = null,
             string _middle_name = null, string _phone_number = null, string _pas_ser = null, string _pas_num = null,
             string _town = null, string _street = null, string _house = null, string _apartment = null)
         {
@@ -91,8 +91,8 @@ namespace Apteka_control
                     using (SQLiteConnection con = new SQLiteConnection(connectionString))
                     {
                         con.Open();
-                            string script = $"insert into Customers(first_name, second_name, middle_name, phone_number, passport_series, passport_number, town, street, house, apartment)" +
-                            $"values (\"{first_name}\", \"{second_name}\", \"{middle_name}\", \"{phone_number}\", \"{pas_ser}\", \"{pas_num}\", \"{town}\", \"{street}\", \"{house}\", \"{apartment}\")";
+                        string script = $"insert into Customers(first_name, second_name, middle_name, phone_number, passport_series, passport_number, town, street, house, apartment)" +
+                        $"values (\"{first_name}\", \"{second_name}\", \"{middle_name}\", \"{phone_number}\", \"{pas_ser}\", \"{pas_num}\", \"{town}\", \"{street}\", \"{house}\", \"{apartment}\")";
                         using (SQLiteCommand command = new SQLiteCommand(script, con))
                         {
                             int rowsAffected = command.ExecuteNonQuery();
@@ -116,8 +116,8 @@ namespace Apteka_control
                         string script;
 
 
-                            script = $"update Customers set first_name = \"{first_name}\", second_name = \"{second_name}\", middle_name = \"{middle_name}\", phone_number = \"{phone_number}\", " +
-                                $"passport_series = \"{pas_ser}\", passport_number = \"{pas_num}\", town = \"{town}\", street = \"{street}\", house = \"{house}\", apartment = \"{apartment}\" where customer_id = \"{customer_id}\"";
+                        script = $"update Customers set first_name = \"{first_name}\", second_name = \"{second_name}\", middle_name = \"{middle_name}\", phone_number = \"{phone_number}\", " +
+                            $"passport_series = \"{pas_ser}\", passport_number = \"{pas_num}\", town = \"{town}\", street = \"{street}\", house = \"{house}\", apartment = \"{apartment}\" where customer_id = \"{customer_id}\"";
                         using (SQLiteCommand command = new SQLiteCommand(script, con))
                         {
                             int rowsAffected = command.ExecuteNonQuery();
@@ -169,6 +169,42 @@ namespace Apteka_control
         {
             // Запрет писать что угодно кроме цифр
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Запрет писать кавычки
+            if (e.KeyChar == '"') e.Handled = true;
         }
     }
 }
